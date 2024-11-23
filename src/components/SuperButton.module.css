@@ -1,0 +1,16 @@
+.navyBlueButtonStyle {
+    background-color: navy;
+    color: white;
+    width: 120px;
+    border: solid red 3px ;
+    margin: 5px;
+}
+
+.pinkyBlueButtonStyle {
+    background-color: lightpink;
+    color: white;
+    width: 120px;
+    border: solid seagreen 3px ;
+    margin: 5px;
+}
+

@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from "axios";
+import {SuperButton} from "./components/SuperButton";
+import styles from './components/SuperButton.module.css'
+import {Modal} from "./components/modal/Modal";
 
 // Hi guys! Let`s reinforce our session:
 
@@ -65,14 +68,30 @@ function App() {
 
     return (
         <div className="App">
-            <button onClick={onClickHandler}>CLEAN POSTS</button>
-            <button onClick={getTodos}>GET POSTS</button>
-            <ul>
-                {mapTodos}
+            <Modal>
+                <p>Confidential information</p>
+                <input type="email" placeholder={'email'}/>
+                <input type="password" placeholder={'password'}/>
+                <input type="password" placeholder={'password'}/>
+                <label>
+                    <input type="checkbox"/>
+                    save
+                </label>
 
-            </ul>
+                <SuperButton bgColor={'#32f'}>login</SuperButton>
 
+                <SuperButton className={styles.navyBlueButtonStyle} borderColor={'#d7cdcd'}>NAVY</SuperButton>
+                <SuperButton className={styles.pinkyBlueButtonStyle}>PINKY</SuperButton>
+            </Modal>
 
+            <div>
+                <button onClick={onClickHandler}>CLEAN POSTS</button>
+                <button onClick={getTodos}>GET POSTS</button>
+                <ul>
+                    {mapTodos}
+                </ul>
+
+            </div>
         </div>
     );
 }
